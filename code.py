@@ -1,33 +1,31 @@
-print("¡Bienvenido a la Aventura del Bosque Encantado!")
+print("Welcome to the Enchanted Forest Adventure!")
 
 while True:
-    print("\nTe encuentras frente a dos caminos: izquierda o derecha.")
-    camino = input("¿Cuál eliges? ").lower()
+    print("\nYou find yourself in front of two paths: left or right.")
+    path = input("Which do you choose? ").lower()
 
-    if camino == "izquierda":
-        print("Te encuentras con un río. Puedes nadar o rodear.")
-        accion = input("¿Qué haces? nadar/rodear: ").lower()
-        if accion == "nadar":
-            print("Te arrastra la corriente. ¡Fin del juego!")
-        elif accion == "rodear":
-            print("Encuentras un tesoro escondido. ¡Ganaste!")
+    if path == "left":
+        print("You encounter a river. You can swim or go around.")
+        action = input("What do you do? swim/go around: ").lower()
+        if action == "swim":
+            print("The current drags you away. Game over!")
+        elif action == "go around":
+            print("You find a hidden treasure. You win!")
         else:
-            print("No hiciste nada y se hace de noche. ¡Fin del juego!")
-    elif camino == "derecha":
-        print("Te topas con un dragón. Puedes luchar o huir.")
-        accion = input("¿Qué haces? luchar/huir: ").lower()
-        if accion == "luchar":
-            print("El dragón te quema con fuego. ¡Fin del juego!")
-        elif accion == "huir":
-            print("Escapas sano y salvo. ¡Eres un héroe!")
+            print("You do nothing and night falls. Game over!")
+    elif path == "right":
+        print("You run into a dragon. You can fight or run away.")
+        action = input("What do you do? fight/run: ").lower()
+        if action == "fight":
+            print("The dragon burns you with fire. Game over!")
+        elif action == "run":
+            print("You escape safe and sound. You are a hero!")
         else:
-            print("Te quedas paralizado y el dragón te ve. ¡Fin del juego!")
+            print("You freeze and the dragon sees you. Game over!")
     else:
-        print("No elegiste un camino válido. El bosque te confunde. ¡Fin del juego!")
+        print("You did not choose a valid path. The forest confuses you. Game over!")
 
-    replay = input("\n¿Quieres jugar de nuevo? si/no: ").lower()
-    if replay != "si":
-        print("¡Gracias por jugar! Hasta la próxima.")
+    replay = input("\nDo you want to play again? yes/no: ").lower()
+    if replay != "yes":
+        print("Thanks for playing! See you next time.")
         break
-
-    #ññññññ
